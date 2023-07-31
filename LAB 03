@@ -1,1 +1,81 @@
+// Question 01 //
+
+<?php
+ $x = 6;
+    $y = 4;
+
+    echo "Sum ",($x + $y),"<br>";
+    echo "Diffrence ",($x - $y),"<br>";
+    echo "Product ",($x * $y),"<br>";
+    echo "Division ",($x / $y),"<br>";
+?>
+
+// Question 02 //
+
+<?php
+    for($x = 5; $x <= 15; $x+=3 ) {
+        echo "$x <br>";
+    }
+?>
+
+// Question 03 //
+
+<?php
+    $units = $_POST["Uni"];
+    $bill = null;
+
+    if ($units <= 50){
+        $bill = $units * 3.5;
+        echo "Rs.", $bill;
+    }
+    elseif ($units <= 100) {
+        $g_50 = $units - 50;
+        $bill = (50 * 3.5) + ($g_50 * 4);
+        echo "Rs.", $bill;
+    }
+    elseif ($units <= 150) {
+        $g_100 = $units - 100;
+        $bill = $g_100 * 5.20 + (50 * 3.5) + (50 * 4);
+        echo "Rs.", $bill;
+    }
+    elseif ($units > 150) {
+        $g_150 = $units - 150;
+        $bill = $g_150 * 6.5 + (50 * 5.2) + (50 * 3.5) + (50 * 4);
+        echo "Rs.", $bill;
+    }
+
+?>
+
+// Question 04 //
+
+<?php
+    $day = 7;
+
+    switch($day) {
+        case 1:
+            echo "Monday";
+            break;
+        case 2:
+            echo "Tuesday";
+            break;
+        case 3:
+            echo "Wednesday";
+            break;
+        case 4:
+            echo "Thursday";
+            break;
+        case 5:
+            echo "Friday";
+            break;
+        case 6:
+            echo "Saturday";
+            break;
+        case 7:
+            echo "Sunday";
+            break;
+        default:
+            echo "Invalid Date!";
+    }
+?>
+
 
